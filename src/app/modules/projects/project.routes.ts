@@ -13,7 +13,6 @@ router.post(
 
 router.get("/", projectControllers.handleGetAllProjects);
 router.get("/:id", projectControllers.handleGetSingleProject);
-router.delete("/:id", projectControllers.handleDeleteProject);
 router.put(
   "/:id",
   validateRequest(projectValidationSchemas.updateProjectSchema),

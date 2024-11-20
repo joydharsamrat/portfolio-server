@@ -6,7 +6,7 @@ const addProject = async (payload: TProject) => {
   return result;
 };
 const getAllProjects = async () => {
-  const result = await Project.find();
+  const result = await Project.find({ isDeleted: false });
   return result;
 };
 const getSingleProject = async (id: string) => {
