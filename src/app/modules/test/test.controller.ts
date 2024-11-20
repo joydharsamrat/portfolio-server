@@ -1,7 +1,7 @@
 import { testServices } from "./test.service";
 import sendResponse from "../../utils/sendResponse";
 import httpStatus from "http-status";
-import catchAsync from "../../utils/catchasync";
+import catchAsync from "../../utils/catchAsync";
 
 const handleCreateTest = catchAsync(async (req, res) => {
   const result = await testServices.createTest(req.body);
