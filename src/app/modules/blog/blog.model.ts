@@ -9,7 +9,7 @@ const BlogSchema = new Schema<TBlog>(
     content: { type: String, required: true },
     intro: { type: String, required: true },
     tags: { type: [String] },
-    category: { type: String },
+    category: { type: Schema.ObjectId, ref: "Category" },
     coverImage: { type: String },
     isDeleted: { type: Boolean, default: false },
   },

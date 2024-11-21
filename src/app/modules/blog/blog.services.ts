@@ -6,11 +6,11 @@ const addBlog = async (payload: TBlog) => {
   return result;
 };
 const getAllBlogs = async () => {
-  const result = await Blog.find({ isDeleted: false });
+  const result = await Blog.find({ isDeleted: false }).populate("category");
   return result;
 };
 const getSingleBlog = async (id: string) => {
-  const result = await Blog.findById(id);
+  const result = await Blog.findById(id).populate("category");
   return result;
 };
 const updateBlog = async (id: string, payload: Partial<TBlog>) => {
